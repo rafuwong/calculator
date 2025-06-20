@@ -40,35 +40,59 @@ const num2 = document.querySelector(".num2");
 const num3 = document.querySelector(".num3");
 const num0 = document.querySelector(".num0");
 
+
+let displayVal = ""; //Initializing displayVal to an empty string
+
 num7.addEventListener("click", () => {
     console.log("7");
+    displayVal = "7";
+    updateDisplay();
 })
 num8.addEventListener("click", () => {
     console.log("8");
+    displayVal = "8";
+    updateDisplay();
+
 })
 num9.addEventListener("click", () => {
     console.log("9");
+    displayVal = "9";
+    updateDisplay();
 })
 num4.addEventListener("click", () => {
     console.log("4");
+    displayVal = "4";
+    updateDisplay();
 })
 num5.addEventListener("click", () => {
     console.log("5");
+    displayVal = "5";
+    updateDisplay();
 })
 num6.addEventListener("click", () => {
     console.log("6");
+    displayVal = "6";
+    updateDisplay();
 })
 num1.addEventListener("click", () => {
     console.log("1");
+    displayVal = "1";
+    updateDisplay();
 })
 num2.addEventListener("click", () => {
     console.log("2");
+    displayVal = "2";
+    updateDisplay();
 })
 num3.addEventListener("click", () => {
     console.log("3");
+    displayVal = "3";
+    updateDisplay();
 })
 num0.addEventListener("click", () => {
     console.log("0");
+    displayVal = "0";
+    updateDisplay();
 })
 
 //Event Listener and query for all operator butttons and clearing the display
@@ -98,11 +122,14 @@ clearButton.addEventListener("click", () => {
 let display = document.querySelector(".display");
 
 function updateDisplay() {
-    display.textContent = displayNum.toString();
+    if (isNumeric(displayVal)) {
+        display.textContent = displayVal.toString();
+    } else {
+        display.textContent = displayVal.toString() + displayVal.toString().slice(1);
+    } 
 }
-let displayNum = 0;
 
 function clearDisplay() {
-    displayNum = 0;
+    displayVal = "";
     updateDisplay();
 }

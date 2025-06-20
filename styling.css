@@ -33,13 +33,13 @@ header {
 
 .display {
     width: 90%;
-    height: 40px; /* fixed height */
+    height: 40px;
     padding: 10px;
     margin-left: 5px;
     display: flex;
     justify-content: right;
     font-size: 24px;
     background-color: lightgray;
-    box-sizing: border-box; /* includes padding in total height */
-    overflow: hidden; /* prevents overflow if text is long */
+    box-sizing: border-box;
+    overflow: hidden;
 }
