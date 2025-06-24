@@ -145,6 +145,7 @@ clearButton.addEventListener("click", () => {
 equalsButton.addEventListener("click", () => {
     console.log("Equals");
     updateCalcString("=");
+    currentString = 
     // After equals, we can clear displayVal or keep it for further calculations
     updateDisplay();
 })
@@ -171,6 +172,7 @@ function updateCalcString(string) {
     } else if (string === "=") {
         let parts = currentString.split(" ");
         displayVal = operator(parts);
+        currentString = operator(parts).toString();
         return operator(parts);
     } else {
         currentString += string;

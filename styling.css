@@ -31,9 +31,29 @@ header {
     padding: 10px;
 }
 
+.calculator-buttons .clear {
+    background-color: orange;
+    border-color: orange;
+}
+
+.calculator-buttons .opEqual {
+    background-color: rgb(217, 53, 53);
+    border-color: rgb(217, 53, 53);
+}
+.calculator-buttons .operation {
+    background-color: rgb(145, 216, 213);
+    border-color: rgb(145, 216, 213);
+}
+
+.calculator-buttons .blank_button {
+    background-color: darkblue;
+    border-color: darkblue;
+}
+
 .calculator-buttons button {
     width: 60px;
     height: 60px;
+    margin: 2px;
     font-size: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -41,6 +61,7 @@ header {
     cursor: pointer;
     transition: background-color 0.2s ease;
 }
+
 
 .calculator-buttons button:hover {
     background-color: #f0f0f0;
@@ -61,7 +82,3 @@ header {
     overflow: hidden;
 }
 
-.blank_button {
-    background-color: darkblue;
-    border-color: darkblue;
-}
